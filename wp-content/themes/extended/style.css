@@ -1,0 +1,399 @@
+/*
+Theme Name: Extended
+Theme URI: none
+Description: Корпоротивный сайт
+Author: Anton
+Version: 1.0
+*/
+@font-face {
+    font-family: 'pt_sans';
+    src: url('font/pt-sans-webfont.eot');
+    src: url('font/pt-sans-webfont.eot?#iefix') format('font/embedded-opentype'),
+         url('font/pt-sans-webfont.woff2') format('woff2'),
+         url('font/pt-sans-webfont.woff') format('woff'),
+         url('font/pt-sans-webfont.ttf') format('truetype'),
+         url('font/pt-sans-webfont.svg#pt_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+	padding:0; margin:0;
+}
+img{
+	border:none;
+}
+a{
+	text-decoration:none; outline:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+body{
+	background:#e9e9e9 url(images/background.jpg); border-top:5px solid #d7a229; color:#333; line-height:1.8;
+}
+.karkas{
+	background:#fff; width:1000px; margin:0 auto;
+}
+.header:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.header{
+	background:url(images/background-menu.jpg); padding:35px 30px 0 30px;
+}
+	.logo{
+		float:left;
+	}
+	.head-contakt{
+		float:right; color:#d4d4d4; font-size:12px; font-family:"Droid Serif"; margin-bottom:3px;
+	}
+	.head-contakt a{
+		color:#d4d4d4;
+	}
+	.head-contakt img{
+		vertical-align:baseline; margin: 0 7px 0 0;
+	}
+	.head-soc{
+		clear:right; float:right; margin-bottom:35px;
+	}
+		.head-soc img{
+			margin-left:5px;
+		}
+	.menu{
+		clear:both; float:left; width:100%; font:bold 12px "Droid Serif"; border-top:1px solid #494d4e;
+		border-left:1px solid #494d4e;
+		border-right:1px solid #494d4e;
+		border-radius:5px 5px 0 0;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#414547+0,35393b+100 */
+		background: rgb(65,69,71); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(65,69,71,1) 0%, rgba(53,57,59,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(65,69,71,1) 0%,rgba(53,57,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(65,69,71,1) 0%,rgba(53,57,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414547', endColorstr='#35393b',GradientType=0 ); /* IE6-9 */
+	}
+		.menu ul{
+			list-style:none;
+		}
+		.menu ul li{
+			float:left; border-left:1px solid #434749; border-right:1px solid #323638; position:relative; top:-1px;
+		}
+		.menu ul li:first-child{
+			border-left:none;
+		}
+		.menu ul li:last-child{
+			border-right:none;
+		}
+		.menu ul li a{
+			color:#fff; padding:14px 17px; display:block; text-shadow:1px -1px 1px #000; border-bottom:4px solid #35393b; border-top:1px solid #474b4d;
+		}
+		.menu ul li a:hover{
+			border-bottom:4px solid #d7a229; text-decoration:none; border-top:1px solid #454a4c;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3d4143+0,242627+100 */
+			background: rgb(61,65,67); /* Old browsers */
+			background: -moz-linear-gradient(top,  rgba(61,65,67,1) 0%, rgba(36,38,39,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  rgba(61,65,67,1) 0%,rgba(36,38,39,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  rgba(61,65,67,1) 0%,rgba(36,38,39,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d4143', endColorstr='#242627',GradientType=0 ); /* IE6-9 */
+
+		}
+	.search{
+		float:right; padding:10px 10px 10px 18px;
+	}
+		.search imput{
+			float:left;
+		}
+		.search-txt{
+			border-radius:10px; border-top:1px solid #e5e5e5;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;border-bottom:1px solid #a5a6a7;color:#959595; font:bold 12px "Droid Serif"; width:130px; padding:4px 10px; margin-right:10px; 
+		}
+	.under-slider{
+		background:#ffffff url(images/background-line.png); padding:45px 30px; margin-bottom:40px;
+	}
+	.under-slider h1{
+		font:normal 24px "Droid Serif";
+	}
+	.under-slider p{
+		font-size:13px; font-family:pt_sans;
+	}
+	.content-main{
+		padding:0 30px 60px 30px; border-bottom:5px solid #d7a229; background:#fff url(images/background-line.png) bottom repeat-x; font-family:pt_sans; font-size:13px;
+	}
+	.content-main:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.content-main p{
+		margin-bottom:20px;
+	}
+	.whatwedo{
+		margin-bottom:15px;
+	}
+	.whatwedo:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.whatwedo div{
+		float:left; width:212px; margin-left:30px;
+	}
+	.whatwedo div:first-child{
+		float:left; width:212px; margin-left:0px;
+	}
+	.whatwedo h1{
+		font:16px "Droid Serif"; margin-bottom:15px; background:url(images/background-line.png) 0 6px repeat-x; 
+	}
+	.whatwedo h1 span{
+		background:#fff; padding-right:15px;
+	}
+	.center-n{
+		text-align:center; font:24px "Droid Serif"; background:url(images/background-line.png) center repeat-x; position:relative; margin-bottom:45px;
+	}
+	.hnl{
+		position:absolute; right:0; font-size:13px; font-family:pt_sans; color:#d7a229; top:6px; background:#fff; padding:0 0 0 15px;
+	}
+		.hnl a{
+			color:#d7a229;
+		}
+	.hnc{
+		background:#fff; padding:0 15px;
+	}
+	.our-works-main:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.our-works-main{
+		margin-bottom:45px;
+	}
+	.our-works{
+		float:left; margin-left:29px; background:url(images/background-line.png); padding:0 5px 5px 0; width:208px; position:relative;
+	}
+	.our-works:first-child{
+		margin-left:0px;
+	}
+	.our-work-short{
+		position:absolute; text-align:center; border:5px solid #afafaf; width:198px; height:198px; background:rgba(137, 137, 137, 0.2); display:none;
+	}
+	.our-work-short img{
+		margin:70px 0 15px 0;
+	}
+	.our-work-short h3{
+		font:12px "Droid Serif"; color:#252525; margin-bottom:5xp;
+	}
+	.our-work-short p{
+		font:10px "Droid Serif"; color:#555; margin-bottom:5xp;
+	}
+	a.our-work-href{
+		display:block;
+	}
+	a:hover.our-work-href .our-work-short {
+		display:block;
+	}
+.advance:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.why-us{
+	width:49%; float:left;
+}
+.our-services{
+	width:49%; float:right;
+}
+.advance{
+	overflow:hidden;
+}
+	.why-us{
+		width:49%; float:left;
+	}
+	.our-services{
+		width:49%; float:right;
+	}
+.img-righter{
+	float:right; margin:0 0 15px 15px;
+}
+.img-lefter{
+	background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    padding: 10px 20px 10px 0;
+    position: relative;
+    z-index: 10;
+}
+.footer:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.footer{
+	background:url(images/background-line.png); margin-top:20px; font-size:12px; color:#707070; font-family:Georgia, "Time New Roman", Times, serif; padding:20px 20px 20px 30px;
+}
+	.copy{
+		float:left;
+	}
+	.ftrmenu{
+		float:right;
+	}
+		.ftrmenu a{
+			color:#707070; margin:0 10px;
+		}
+/*		ABOUT		*/
+
+.page-title{
+	background:url(images/background-line.png); padding:25px 30px; overflow:hidden; margin-bottom:50px;
+}
+	.page-title h1{
+		float:left; font:normal 24px "Droid Serif";
+	}
+	.page-title-map{
+		float:right; font:italic 12px pt_sans; margin:7px 0 0 0; color:#363636;
+ 	}
+	.page-title-map a{
+		color:#363636;
+	}
+.our-team-main{
+	overflow:hidden; margin-bottom:25px;
+}
+	.our-team-main div{
+		width:273px; padding:0 10px; float:left; margin-left:30px;
+	}
+	.our-team-main div:first-child{
+		width:273px; padding:0 10px; float:left; margin-left:0px;
+	}
+	.our-team-main div h2{
+		font:normal 14px "Droid Serif"; overflow:hidden; line-height:2.3; margin-bottom:20px;
+	}
+		.our-team-main div h2 span{
+			font:italic 12px pt_sans; color:#898989;
+		}
+		.our-team-main div h2 img{
+			float:left; margin-right: 20px;
+		}
+.our-clients{
+	overflow:hidden;
+}
+	.our-clients a{
+		float:left; margin-left:15px;
+	}
+	.our-clients a:first-child{
+		float:left; margin-left:0px;
+	}
+/* portfoli */
+.page-nav{
+	background:url(images/naklon-smal-bg.jpg) bottom repeat-x; margin: 0 30px 50px 30px;
+}
+.page-nav:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+	.page-nav ul{
+		background:url(images/naklon-smal-bg.jpg) top repeat-x; list-style:none; 
+	}
+	.page-nav ul:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+		.page-nav ul li{
+			float:left; font:15px 'pt_sans';
+		}
+			.page-nav ul li a{
+				display:block; padding:15px 20px; color:#333;
+			}
+				.page-nav ul li a:hover{
+					border-bottom:5px solid #d7a229; color:#d7a229; text-decoration:none; padding:15px 20px 10px 20px;
+				}
+.artical-anons-main{
+	margin-bottom:30px; background:url(images/naklon-smal-bg.jpg) bottom repeat-x; padding:0 0 5px 0;
+}
+.artical-anons-main:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.artical-img{
+	float:left; margin:0 30px 0 0;
+}
+.artical-head{
+	padding-top:10px;
+}
+.artical-head h1{
+	font:normal 16px "Droid Serif"; color:#363636; margin-bottom:10px;
+}
+.artical-head p{
+	font: 12px "pt_sans"; color:#555;
+}
+a.read-more{
+	display:inline-block; width:101px; background:url(images/read-more.jpg) 0 0 no-repeat; font:bold 12px "Droid Serif"; text-align:center; color:#404040;  padding:6px 0;
+}
+a:hover.read-more{
+	background:url(images/read-more.jpg) 0 -29px no-repeat; text-decoration:none; padding:5px 0 7px 0;
+}
+.pager{
+	list-style:none; float:right;
+}
+.pager:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.pager li{
+	float:left; font:bold 14px pt_sans;
+}
+.pager li a{
+	color:#363636; display:block; padding:5px 10px;
+}
+.pager li a.now{
+	color:#fff; background:#d7a229; margin:0 10px;
+}
+/* portfolio-single */
+.slider-portfolio{
+	background:url(images/background-line.png); padding:30px 30px 0 30px; margin-bottom:50px;
+}
+.slider-portfolio:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.slider-portfolio .flexslider{
+	border-bottom:none;
+}
+.slider-portfolio .flex-control-nav{
+	display:none;
+}
+.content-left{
+	width:710px; float:left;
+}
+.right-bar{
+	width:200px; float:right; padding:6px 0 0 0;
+}
+.projeact-descrip{
+	font:normal 16px "Droid Serif"; background:url(images/background-line.png) left 12px repeat-x; margin-bottom:20px;
+}
+.projeact-descrip img{
+	vertical-align:bottom; margin-right:15px;
+}
+.projeact-descrip span{
+	background:#fff; padding:0 20px 0 0;
+}
+.right-bar h3{
+	font:normal 16px "Droid Serif"; background:url(images/background-line.png) left center repeat-x; margin-bottom:20px;
+}
+.right-bar span{
+	background:#fff; padding:0 20px 0 0;
+}
+.right-bar ul{
+	list-style:none; margin:0 0 30px 0;
+}
+.right-bar a{
+	color:#333;
+}
+.right-bar a:hover{
+	color:#d7a229; text-decoration:none;
+}
+.clr{
+	content:"";
+	display:block;
+	clear:both;
+}
