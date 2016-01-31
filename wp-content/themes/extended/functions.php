@@ -24,3 +24,20 @@ function load_style_script(){
 * загружаем скрипты и стили
 */
 add_action('wp_enqueue_scripts', 'load_style_script');
+
+
+/*опции*/
+function my_more_options(){
+	add_settings_field(
+		'phone',//id
+		'Телефон',//название поле
+		'display_phone',//callback
+		'general');//'general'-где выводить. Cоздаем поле опции
+	register_setting(
+		'general',//название группу к какой будет принадлежать опция
+		'my_phone');//'my_phone' - название опции, которая будет сохраняться в БД. Регистрирует новую опцию и callback функции (функцию обратного вызова) для обработки значения опции при её сохранении в БД
+}
+add_action('admin_init', 'my_more_options');//привязать к хуку
+function display_phone(){
+	echo "<input type='text' class='regular-text' name='my_phone' value='".esc_attr(get_option('my_phone'))."'>";
+}
