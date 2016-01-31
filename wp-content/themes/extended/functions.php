@@ -41,3 +41,13 @@ add_action('admin_init', 'my_more_options');//привязать к хуку
 function display_phone(){
 	echo "<input type='text' class='regular-text' name='my_phone' value='".esc_attr(get_option('my_phone'))."'>";
 }
+
+/*иконки*/
+register_sidebar(array(
+	'name' => 'Иконки в шапке',
+	'id' => 'icons_header',
+	'description' => 'используйте виджет текст, для добавления html кода иконок',
+	'before_widget' => '',
+	'after_widget' => '',
+	
+));

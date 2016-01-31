@@ -8,18 +8,14 @@
 <body>
 <div class="karkas">
 	<div class="header">
-		<a href="#"><img class="logo" src="<?php bloginfo('template_url')?>/images/logo.png" alt="" /></a>
+		<a href="<?php echo home_url();//получить ссылку на домашнюю страницу?>"><img class="logo" src="<?php bloginfo('template_url')?>/images/logo.png" alt="" /></a>
 		<p class="head-contakt">
 		<img src="<?php bloginfo('template_url')?>/images/mail.png" alt="" /><a href="mailto:<?php bloginfo('admin_email');?>"><?php bloginfo('admin_email');?></a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; <img src="<?php bloginfo('template_url')?>/images/phone.png" alt="" /><?php echo get_option('my_phone');?>
 		</p>
 		<div class="head-soc">
-			<a href="#"><img src="<?php bloginfo('template_url')?>/images/facebook.png" alt="" /></a>
-			<a href="#"><img src="<?php bloginfo('template_url')?>/images/twitter.png" alt="" /></a>
-			<a href="#"><img src="<?php bloginfo('template_url')?>/images/soc1.png" alt="" /></a>
-			<a href="#"><img src="<?php bloginfo('template_url')?>/images/soc2.png" alt="" /></a>
-			<a href="#"><img src="<?php bloginfo('template_url')?>/images/youtube.png" alt="" /></a>
-			<a href="#"><img src="<?php bloginfo('template_url')?>/images/v.png" alt="" /></a>
-			<a href="#"><img src="<?php bloginfo('template_url')?>/images/rss.png" alt="" /></a>
+			<?php if(!dynamic_sidebar('icons_header')):?>
+				<p>Место для социальных иконок</p>
+			<?php endif;?>
 		</div>
 		<div class="menu">
 			<ul>
