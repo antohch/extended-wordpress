@@ -18,16 +18,11 @@
 			<?php endif;?>
 		</div>
 		<div class="menu">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">The Team</a></li>
-				<li><a href="#">Testimonials</a></li>
-				<li><a href="#">Our Work</a></li>
-				<li><a href="#">Our Videos</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+			<?php wp_nav_menu(array(
+				'container' => '', 
+				'menu_class' => '', 
+				'theme_location' => 'header_menu',
+			));?>
 			<div class="search">
 				<form action="">
 					<input class="search-txt" type="text" name="search" value="Поиск" onfocus="if(this.value=='Поиск')this.value=''" onblur="if(this.value=='')this.value='Поиск'" />

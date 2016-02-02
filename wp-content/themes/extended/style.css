@@ -237,6 +237,13 @@ body{
 		.ftrmenu a{
 			color:#707070; margin:0 10px;
 		}
+		.ftrmenu ul li{
+			display:inline;
+			border-right:1px solid #707070;
+		}
+		.ftrmenu ul li:last-child{
+			border:none;
+		}
 /*		ABOUT		*/
 
 .page-title{

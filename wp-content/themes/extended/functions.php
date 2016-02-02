@@ -51,3 +51,10 @@ register_sidebar(array(
 	'after_widget' => '',
 	
 ));
+
+/*меню регистрируем*/
+register_nav_menus(array(
+	'header_menu' => 'меню в шапк',
+	'footer_menu' => 'меню в подвале',
+	
+));
