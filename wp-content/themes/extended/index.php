@@ -5,22 +5,12 @@
 		<div class="flexslider">
 			<ul class="slides">
 <?php while($slider->have_posts()): $slider->the_post(); ?>
-
-
 				<li>
 					<div class="slide-content">
-						<!--<h1>Super Powerful Theme,<br />
-						With High Quality Standards</h1> 
-						<h3>Multi-Purpose Business WordPress Theme</h3>
-						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id<br /> nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,<br /> egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>    
-						<p><a href="#"><img src="<?php bloginfo('template_url')?>/images/slide-btn.png" /></a></p>-->
 						<?php the_content(); ?>
 					</div>
-					<!--<img src="<?php bloginfo('template_url')?>/images/slide1.jpg" />-->
 					<?php the_post_thumbnail('full'); ?>
 				</li>
-
-	
 <?php endwhile; ?>
 			</ul>
 		</div>
