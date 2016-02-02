@@ -18,10 +18,19 @@
 <?php else: ?>
 <div><h1>Место для слайдера</h1></div>
 <?php endif; ?>
-	<div class="under-slider">
-		<h1>Extended is immensely powerful, flexible and nicely responsive.</h1>
+
+<!--		<h1>Extended is immensely powerful, flexible and nicely responsive.</h1>
 		<p>You can easily add modules to the page with our Front-end Drag & Drop functionality. Page layouts began to be infinite and you can follow your creativity. The header is very flexible and allow you to upload backgrounds as well as choosing between few header layouts. Creating and updating your theme has never been that easy and it is fun to play with. Take a tour at all the pages and discover what a great and beautiful theme has to offer.</p>
-	</div>
+	-->
+        <?php if (have_posts()): while(have_posts()): the_post(); ?>
+            <div class="under-slider">
+                <h1><?php the_title(); ?></h1>
+                <?php the_content(); ?>
+            </div>
+        <?php endwhile; ?>
+        <?php else: ?>
+        <?php endif; ?>
+
 	<div class="content-main">
 		<div class="whatwedo">
 			<div>
