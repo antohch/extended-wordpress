@@ -1,51 +1,33 @@
 <?php get_header();?>
-	
+<?php $slider = new WP_Query(array('post_type' => 'slider', 'order' => 'ASC')); ?>
+<?php if($slider->have_posts()): ?>
 	<div class="slider">
 		<div class="flexslider">
 			<ul class="slides">
+<?php while($slider->have_posts()): $slider->the_post(); ?>
+
+
 				<li>
 					<div class="slide-content">
-						<h1>Super Powerful Theme,<br />
+						<!--<h1>Super Powerful Theme,<br />
 						With High Quality Standards</h1> 
 						<h3>Multi-Purpose Business WordPress Theme</h3>
 						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id<br /> nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,<br /> egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>    
-						<p><a href="#"><img src="<?php bloginfo('template_url')?>/images/slide-btn.png" /></a></p>
+						<p><a href="#"><img src="<?php bloginfo('template_url')?>/images/slide-btn.png" /></a></p>-->
+						<?php the_content(); ?>
 					</div>
-					<img src="<?php bloginfo('template_url')?>/images/slide1.jpg" />
+					<!--<img src="<?php bloginfo('template_url')?>/images/slide1.jpg" />-->
+					<?php the_post_thumbnail('full'); ?>
 				</li>
-				<li>
-				<div class="slide-content">
-						<h1>Super Powerful Theme,<br />
-						With High Quality Standards</h1> 
-						<h3>Multi-Purpose Business WordPress Theme</h3>
-						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id<br /> nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,<br /> egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>    
-						<p><a href="#"><img src="<?php bloginfo('template_url')?>/images/slide-btn.png" /></a></p>
-					</div>
-					<img src="<?php bloginfo('template_url')?>/images/slide1.jpg" />
-				</li>
-				<li>
-					<div class="slide-content">
-						<h1>Super Powerful Theme,<br />
-						With High Quality Standards</h1> 
-						<h3>Multi-Purpose Business WordPress Theme</h3>
-						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id<br /> nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,<br /> egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>    
-						<p><a href="#"><img src="<?php bloginfo('template_url')?>/images/slide-btn.png" /></a></p>
-					</div>
-					<img src="<?php bloginfo('template_url')?>/images/slide1.jpg" />
-				</li>
-				<li>
-					<div class="slide-content">
-						<h1>Super Powerful Theme,<br />
-						With High Quality Standards</h1> 
-						<h3>Multi-Purpose Business WordPress Theme</h3>
-						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id<br /> nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,<br /> egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>    
-						<p><a href="#"><img src="<?php bloginfo('template_url')?>/images/slide-btn.png" /></a></p>
-					</div>
-					<img src="<?php bloginfo('template_url')?>/images/slide1.jpg" />
-				</li>
+
+	
+<?php endwhile; ?>
 			</ul>
 		</div>
-    </div>	
+    </div>
+<?php else: ?>
+<div><h1>Место для слайдера</h1></div>
+<?php endif; ?>
 	<div class="under-slider">
 		<h1>Extended is immensely powerful, flexible and nicely responsive.</h1>
 		<p>You can easily add modules to the page with our Front-end Drag & Drop functionality. Page layouts began to be infinite and you can follow your creativity. The header is very flexible and allow you to upload backgrounds as well as choosing between few header layouts. Creating and updating your theme has never been that easy and it is fun to play with. Take a tour at all the pages and discover what a great and beautiful theme has to offer.</p>

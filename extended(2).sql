@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: phpmyadmin
--- Время создания: Фев 02 2016 г., 13:47
+-- Время создания: Фев 02 2016 г., 16:02
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `ext_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=208 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=212 ;
 
 --
 -- Дамп данных таблицы `ext_options`
@@ -219,10 +219,10 @@ INSERT INTO `ext_options` (`option_id`, `option_name`, `option_value`, `autoload
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:6:{i:1454410359;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:2:{s:8:"schedule";b:0;s:4:"args";a:0:{}}}}i:1454438028;a:2:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454438029;a:1:{s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454481251;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1454491636;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(109, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.1.zip";s:6:"locale";s:5:"ru_RU";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.1.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.4.1";s:7:"version";s:5:"4.4.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1454403158;s:15:"version_checked";s:5:"4.4.1";s:12:"translations";a:0:{}}', 'yes'),
-(111, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1454403164;s:8:"response";a:0:{}s:12:"translations";a:0:{}s:9:"no_update";a:2:{s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"3.1.7";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.3.1.7.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}}}', 'yes'),
-(114, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1454403166;s:7:"checked";a:4:{s:8:"extended";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.4";s:14:"twentyfourteen";s:3:"1.6";s:13:"twentysixteen";s:3:"1.1";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
+(104, 'cron', 'a:6:{i:1454418787;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:2:{s:8:"schedule";b:0;s:4:"args";a:0:{}}}}i:1454438028;a:2:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454438029;a:1:{s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454481251;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1454491636;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(109, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.1.zip";s:6:"locale";s:5:"ru_RU";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.1.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.4.1";s:7:"version";s:5:"4.4.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1454411587;s:15:"version_checked";s:5:"4.4.1";s:12:"translations";a:0:{}}', 'yes'),
+(111, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1454411592;s:8:"response";a:0:{}s:12:"translations";a:0:{}s:9:"no_update";a:2:{s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"3.1.7";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.3.1.7.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}}}', 'yes'),
+(114, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1454411592;s:7:"checked";a:4:{s:8:"extended";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.4";s:14:"twentyfourteen";s:3:"1.6";s:13:"twentysixteen";s:3:"1.1";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
 (115, '_site_transient_timeout_browser_8d9a789551cb1a9d04cdb194d1c5fade', '1454654052', 'yes'),
 (116, '_site_transient_browser_8d9a789551cb1a9d04cdb194d1c5fade', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:7:"Firefox";s:7:"version";s:4:"43.0";s:10:"update_url";s:23:"http://www.firefox.com/";s:7:"img_src";s:50:"http://s.wordpress.org/images/browsers/firefox.png";s:11:"img_src_ssl";s:49:"https://wordpress.org/images/browsers/firefox.png";s:15:"current_version";s:2:"16";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
 (122, '_transient_twentysixteen_categories', '1', 'yes'),
@@ -254,10 +254,10 @@ INSERT INTO `ext_options` (`option_id`, `option_name`, `option_value`, `autoload
 (196, '_transient_plugin_slugs', 'a:2:{i:0;s:19:"akismet/akismet.php";i:1;s:9:"hello.php";}', 'no'),
 (197, '_transient_timeout_dash_f69de0bbfe7eaa113146875f40c02000', '1454446382', 'no'),
 (198, '_transient_dash_f69de0bbfe7eaa113146875f40c02000', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wordpress.org/news/2016/01/contributor-weekend-support-forums/''>Contributor Weekend: Support Forums</a> <span class="rss-date">22.01.2016</span><div class="rssSummary">Our first global contributor drive is coming up next weekend, January 30-31, 2016, and we want you to be involved! Many of our current contributors first got involved at a Contributor Day at a WordCamp or WordPress Meetup event near them, but not everyone has had that opportunity, so we’re trying to create an online experience that [&hellip;]</div></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://ma.tt/2016/02/getting-a-job-after-coding-bootcamp/''>Matt: Getting a Job After Coding Bootcamp</a></li><li><a class=''rsswidget'' href=''http://wptavern.com/in-case-you-missed-it-issue-2''>WPTavern: In Case You Missed It – Issue 2</a></li><li><a class=''rsswidget'' href=''http://wptavern.com/wpweekly-episode-223-celebrating-8-years-of-ithemes-with-cory-miller''>WPTavern: WPWeekly Episode 223 – Celebrating 8 Years of iThemes With Cory Miller</a></li></ul></div><div class="rss-widget"><ul><li class=''dashboard-news-plugin''><span>Популярный плагин:</span> <a href=''https://wordpress.org/plugins/siteorigin-panels/'' class=''dashboard-news-plugin-link''>Page Builder by SiteOrigin</a>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=siteorigin-panels&amp;_wpnonce=e5d104b33a&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''Page Builder by SiteOrigin''>Установить</a>)</span></li></ul></div>', 'no'),
-(199, '_site_transient_timeout_theme_roots', '1454406811', 'yes'),
-(200, '_site_transient_theme_roots', 'a:4:{s:8:"extended";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
 (205, 'category_children', 'a:0:{}', 'yes'),
-(207, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes');
+(207, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
+(210, '_site_transient_timeout_theme_roots', '1454413389', 'yes'),
+(211, '_site_transient_theme_roots', 'a:4:{s:8:"extended";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -273,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `ext_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=153 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=169 ;
 
 --
 -- Дамп данных таблицы `ext_postmeta`
@@ -419,7 +419,23 @@ INSERT INTO `ext_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (148, 41, '_menu_item_target', ''),
 (149, 41, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (150, 41, '_menu_item_xfn', ''),
-(151, 41, '_menu_item_url', '');
+(151, 41, '_menu_item_url', ''),
+(153, 54, '_edit_last', '1'),
+(154, 54, '_edit_lock', '1454414352:1'),
+(155, 55, '_wp_attached_file', '2016/02/slide-btn.png'),
+(156, 55, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:173;s:6:"height";i:52;s:4:"file";s:21:"2016/02/slide-btn.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"slide-btn-150x52.png";s:5:"width";i:150;s:6:"height";i:52;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(157, 56, '_wp_attached_file', '2016/02/slide1.jpg'),
+(158, 56, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1000;s:6:"height";i:454;s:4:"file";s:18:"2016/02/slide1.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"slide1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:18:"slide1-300x136.jpg";s:5:"width";i:300;s:6:"height";i:136;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:18:"slide1-768x349.jpg";s:5:"width";i:768;s:6:"height";i:349;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(159, 54, '_thumbnail_id', '56'),
+(160, 57, '_edit_last', '1'),
+(161, 57, '_edit_lock', '1454414372:1'),
+(162, 57, '_thumbnail_id', '56'),
+(163, 58, '_edit_last', '1'),
+(164, 58, '_edit_lock', '1454414391:1'),
+(165, 58, '_thumbnail_id', '56'),
+(166, 59, '_edit_last', '1'),
+(167, 59, '_edit_lock', '1454414555:1'),
+(168, 59, '_thumbnail_id', '56');
 
 -- --------------------------------------------------------
 
@@ -456,7 +472,7 @@ CREATE TABLE IF NOT EXISTS `ext_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
 
 --
 -- Дамп данных таблицы `ext_posts`
@@ -503,7 +519,25 @@ INSERT INTO `ext_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (38, 1, '2016-02-02 12:32:23', '2016-02-02 09:32:23', '', 'Home', '', 'publish', 'closed', 'closed', '', 'home-2', '', '', '2016-02-02 12:32:52', '2016-02-02 09:32:52', '', 0, 'http://extended/?p=38', 1, 'nav_menu_item', '', 0),
 (39, 1, '2016-02-02 12:32:23', '2016-02-02 09:32:23', ' ', '', '', 'publish', 'closed', 'closed', '', '39', '', '', '2016-02-02 12:32:52', '2016-02-02 09:32:52', '', 0, 'http://extended/?p=39', 4, 'nav_menu_item', '', 0),
 (40, 1, '2016-02-02 12:32:23', '2016-02-02 09:32:23', ' ', '', '', 'publish', 'closed', 'closed', '', '40', '', '', '2016-02-02 12:32:52', '2016-02-02 09:32:52', '', 0, 'http://extended/?p=40', 3, 'nav_menu_item', '', 0),
-(41, 1, '2016-02-02 12:32:23', '2016-02-02 09:32:23', '', 'About', '', 'publish', 'closed', 'closed', '', '41', '', '', '2016-02-02 12:32:52', '2016-02-02 09:32:52', '', 0, 'http://extended/?p=41', 2, 'nav_menu_item', '', 0);
+(41, 1, '2016-02-02 12:32:23', '2016-02-02 09:32:23', '', 'About', '', 'publish', 'closed', 'closed', '', '41', '', '', '2016-02-02 12:32:52', '2016-02-02 09:32:52', '', 0, 'http://extended/?p=41', 2, 'nav_menu_item', '', 0),
+(42, 1, '2016-02-02 14:20:47', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:20:47', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=42', 0, 'slider', '', 0),
+(43, 1, '2016-02-02 14:22:35', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:22:35', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=43', 0, 'slider', '', 0),
+(44, 1, '2016-02-02 14:23:41', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:23:41', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=44', 0, 'slider', '', 0),
+(45, 1, '2016-02-02 14:23:53', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:23:53', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=45', 0, 'slider', '', 0),
+(46, 1, '2016-02-02 14:24:14', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:24:14', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=46', 0, 'slider', '', 0),
+(47, 1, '2016-02-02 14:25:36', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:25:36', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=47', 0, 'slider', '', 0),
+(48, 1, '2016-02-02 14:26:02', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:26:02', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=48', 0, 'slider', '', 0),
+(49, 1, '2016-02-02 14:28:54', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:28:54', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=49', 0, 'slider', '', 0),
+(50, 1, '2016-02-02 14:33:13', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:33:13', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=50', 0, 'slider', '', 0),
+(51, 1, '2016-02-02 14:33:52', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:33:52', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=51', 0, 'slider', '', 0),
+(52, 1, '2016-02-02 14:34:31', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:34:31', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=52', 0, 'slider', '', 0),
+(53, 1, '2016-02-02 14:34:49', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-02-02 14:34:49', '0000-00-00 00:00:00', '', 0, 'http://extended/?post_type=slider&p=53', 0, 'slider', '', 0),
+(54, 1, '2016-02-02 14:43:52', '2016-02-02 11:43:52', '<h1>Super Powerful Theme,<br />\r\nWith High Quality Standards</h1>\r\n<h3>Multi-Purpose Business WordPress Theme</h3>\r\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id\r\nnibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,\r\negestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.\r\n\r\n<a href="#" rel="attachment wp-att-55"><img class="alignnone size-full wp-image-55" src="http://extended/wp-content/uploads/2016/02/slide-btn.png" alt="" width="173" height="52" /></a>', 'слайдер 1', '', 'publish', 'closed', 'closed', '', '%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80-1', '', '', '2016-02-02 15:01:25', '2016-02-02 12:01:25', '', 0, 'http://extended/?post_type=slider&#038;p=54', 0, 'slider', '', 0),
+(55, 1, '2016-02-02 14:41:57', '2016-02-02 11:41:57', '', '', '', 'inherit', 'open', 'closed', '', 'slide-btn', '', '', '2016-02-02 14:42:21', '2016-02-02 11:42:21', '', 54, 'http://extended/wp-content/uploads/2016/02/slide-btn.png', 0, 'attachment', 'image/png', 0),
+(56, 1, '2016-02-02 14:43:38', '2016-02-02 11:43:38', '', '', '', 'inherit', 'open', 'closed', '', 'slide1', '', '', '2016-02-02 14:43:45', '2016-02-02 11:43:45', '', 54, 'http://extended/wp-content/uploads/2016/02/slide1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(57, 1, '2016-02-02 14:44:11', '2016-02-02 11:44:11', '<h1>Super Powerful Theme,<br />\r\nWith High Quality Standards</h1>\r\n<h3>Multi-Purpose Business WordPress Theme</h3>\r\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id\r\nnibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,\r\negestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.\r\n\r\n<a href="#" rel="attachment wp-att-55"><img class="alignnone size-full wp-image-55" src="http://extended/wp-content/uploads/2016/02/slide-btn.png" alt="" width="173" height="52" /></a>', 'Слайдер 2', '', 'publish', 'closed', 'closed', '', '%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80-2', '', '', '2016-02-02 15:01:53', '2016-02-02 12:01:53', '', 0, 'http://extended/?post_type=slider&#038;p=57', 0, 'slider', '', 0),
+(58, 1, '2016-02-02 14:44:33', '2016-02-02 11:44:33', '<h1>Super Powerful Theme,<br />\r\nWith High Quality Standards</h1>\r\n<h3>Multi-Purpose Business WordPress Theme</h3>\r\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id\r\nnibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,\r\negestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.\r\n\r\n<a href="#" rel="attachment wp-att-55"><img class="alignnone size-full wp-image-55" src="http://extended/wp-content/uploads/2016/02/slide-btn.png" alt="" width="173" height="52" /></a>', 'Слайдер 3', '', 'publish', 'closed', 'closed', '', '%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80-3', '', '', '2016-02-02 15:02:12', '2016-02-02 12:02:12', '', 0, 'http://extended/?post_type=slider&#038;p=58', 0, 'slider', '', 0),
+(59, 1, '2016-02-02 14:45:06', '2016-02-02 11:45:06', '<h1>Super Powerful Theme,<br />\r\nWith High Quality Standards</h1>\r\n<h3>Multi-Purpose Business WordPress Theme</h3>\r\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id\r\nnibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,\r\negestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.\r\n\r\n<a href="#" rel="attachment wp-att-55"><img class="alignnone size-full wp-image-55" src="http://extended/wp-content/uploads/2016/02/slide-btn.png" alt="" width="173" height="52" /></a>', 'Слайдер 4', '', 'publish', 'closed', 'closed', '', '%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80-4', '', '', '2016-02-02 15:02:34', '2016-02-02 12:02:34', '', 0, 'http://extended/?post_type=slider&#038;p=59', 0, 'slider', '', 0);
 
 -- --------------------------------------------------------
 
@@ -626,7 +660,7 @@ CREATE TABLE IF NOT EXISTS `ext_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Дамп данных таблицы `ext_usermeta`
@@ -650,7 +684,9 @@ INSERT INTO `ext_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (15, 1, 'ext_dashboard_quick_press_last_post_id', '3'),
 (16, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),
 (17, 1, 'metaboxhidden_nav-menus', 'a:1:{i:0;s:12:"add-post_tag";}'),
-(18, 1, 'nav_menu_recently_edited', '6');
+(18, 1, 'nav_menu_recently_edited', '6'),
+(19, 1, 'ext_user-settings', 'editor=html&libraryContent=browse&urlbutton=custom'),
+(20, 1, 'ext_user-settings-time', '1454413428');
 
 -- --------------------------------------------------------
 

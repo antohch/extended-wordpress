@@ -58,3 +58,23 @@ register_nav_menus(array(
 	'footer_menu' => 'меню в подвале',
 	
 ));
+
+/*слайдер на главной*/
+add_action('init', 'slider_index');
+function slider_index(){
+	register_post_type('slider', array(
+		'public' => true,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'labels' => array(
+			'name' => 'Слайдеры',
+			'add_new' => 'Добавить слайдер',
+			'all_items' => 'Все слайдеры',
+			'add_new_item' => 'Добавить слайдер',
+		),
+		'menu_position' => 100,
+		'menu_icon' => admin_url().'/images/media-button.png',
+	));
+}
+
+/*поддержка миниатюр*/
+add_theme_support('post-thumbnails');
