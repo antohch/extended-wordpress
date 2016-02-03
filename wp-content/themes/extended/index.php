@@ -44,66 +44,31 @@
 				</div>
 			<?php else: ?>
 			<?php endif; ?>
-			<!--<div>
-				<h1><span>Flexibility</span></h1>
-				<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>
-			</div>
-			<div>
-				<h1><span>Mobile Friendly</span></h1>
-				<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>
-			</div>
-			<div>
-				<h1><span>Very Powerful</span></h1>
-				<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>
-			</div>
-			<div>
-				<h1><span>Drag Modules</span></h1>
-				<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>
-			</div>-->
-		
-		<h1 class="center-n"><span class="hnc">Our Latest Work</span> <span class="hnl"><a href="#">/ View All Portfolio</a></span></h1>
-		<div class="our-works-main">
-			<div class="our-works">
-				<a class="our-work-href" href="#">
-					<div class="our-work-short">
-						<img src="<?php bloginfo('template_url')?>/images/our-work-pic.png" alt="" />
-						<h3>Parturient Purus Bibendum</h3>
-						<p>Photoshop, Lightroom</p>
-					</div>
-					<img class="our-works-img" src="<?php bloginfo('template_url')?>/images/lastwork1.jpg" alt="" />
-				</a>
-			</div>				
-			<div class="our-works">
-				<a class="our-work-href" href="#">
-					<div class="our-work-short">
-						<img src="<?php bloginfo('template_url')?>/images/our-work-pic.png" alt="" />
-						<h3>Parturient Purus Bibendum</h3>
-						<p>Photoshop, Lightroom</p>
-					</div>
-					<img class="our-works-img" src="<?php bloginfo('template_url')?>/images/lastwork2.jpg" alt="" />
-				</a>
-			</div>				
-			<div class="our-works">
-				<a class="our-work-href" href="#">
-					<div class="our-work-short">
-						<img src="<?php bloginfo('template_url')?>/images/our-work-pic.png" alt="" />
-						<h3>Parturient Purus Bibendum</h3>
-						<p>Photoshop, Lightroom</p>
-					</div>
-					<img class="our-works-img" src="<?php bloginfo('template_url')?>/images/lastwork3.jpg" alt="" />
-				</a>
-			</div>				
-			<div class="our-works">
-				<a class="our-work-href" href="#">
-					<div class="our-work-short">
-						<img src="<?php bloginfo('template_url')?>/images/our-work-pic.png" alt="" />
-						<h3>Parturient Purus Bibendum</h3>
-						<p>Photoshop, Lightroom</p>
-					</div>
-					<img class="our-works-img" src="<?php bloginfo('template_url')?>/images/lastwork4.jpg" alt="" />
-				</a>
-			</div>
-		</div>
+
+
+			<?php 
+				$id = 4;//номер категории
+				$posts_about = new WP_Query(array('cat' => $id, 'posts_per_page' => 4, 'order' => 'ASC',));
+			?>
+			<?php if ($posts_about->have_posts()): ?>
+				<h1 class="center-n"><span class="hnc">Our Latest Work</span> <span class="hnl"><a href="<?php echo get_category_link($id); ?>">/ View All Portfolio</a></span></h1>
+				<div class="our-works-main">
+				<?php while($posts_about->have_posts()): $posts_about->the_post(); ?>
+					<div class="our-works">
+						<a class="our-work-href" href="<?php the_permalink(); ?>">
+							<div class="our-work-short">
+								<img src="<?php bloginfo('template_url')?>/images/our-work-pic.png" alt="" />
+								<h3><?php the_title(); ?></h3>
+								<p>Photoshop, Lightroom</p>
+							</div>
+							<img class="our-works-img" src="<?php echo get_post_meta(get_the_ID(), 'portfolio_img', true); ?>" alt="" />
+						</a>
+					</div>	
+				<?php endwhile; ?>
+				</div>
+			<?php else: ?>
+			<?php endif; ?>
+
 		<div class="advance">
 			<div class="why-us">
 				<!-- Accordion -->

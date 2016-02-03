@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: phpmyadmin
--- Время создания: Фев 03 2016 г., 13:07
+-- Время создания: Фев 03 2016 г., 14:15
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `ext_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=245 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=260 ;
 
 --
 -- Дамп данных таблицы `ext_options`
@@ -219,7 +219,7 @@ INSERT INTO `ext_options` (`option_id`, `option_name`, `option_value`, `autoload
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:5:{i:1454491636;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1454524428;a:2:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454524429;a:1:{s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454567651;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:5:{i:1454524428;a:2:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454524429;a:1:{s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1454567651;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1454578036;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (109, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:3:{i:0;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.2.zip";s:6:"locale";s:5:"ru_RU";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.4.2";s:7:"version";s:5:"4.4.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.4.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.4.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.4.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.4.2-new-bundled.zip";s:7:"partial";s:69:"https://downloads.wordpress.org/release/wordpress-4.4.2-partial-1.zip";s:8:"rollback";b:0;}s:7:"current";s:5:"4.4.2";s:7:"version";s:5:"4.4.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:5:"4.4.1";}i:2;O:8:"stdClass":11:{s:8:"response";s:10:"autoupdate";s:8:"download";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.2.zip";s:6:"locale";s:5:"ru_RU";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/ru_RU/wordpress-4.4.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.4.2";s:7:"version";s:5:"4.4.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";s:9:"new_files";s:1:"1";}}s:12:"last_checked";i:1454482870;s:15:"version_checked";s:5:"4.4.1";s:12:"translations";a:0:{}}', 'yes'),
 (111, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1454482876;s:8:"response";a:0:{}s:12:"translations";a:0:{}s:9:"no_update";a:2:{s:19:"akismet/akismet.php";O:8:"stdClass":6:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"3.1.7";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.3.1.7.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}}}', 'yes'),
 (114, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1454482878;s:7:"checked";a:4:{s:8:"extended";s:3:"1.0";s:13:"twentyfifteen";s:3:"1.4";s:14:"twentyfourteen";s:3:"1.6";s:13:"twentysixteen";s:3:"1.1";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
@@ -274,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `ext_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=205 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=263 ;
 
 --
 -- Дамп данных таблицы `ext_postmeta`
@@ -446,7 +446,37 @@ INSERT INTO `ext_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (197, 69, '_edit_last', '1'),
 (198, 69, '_edit_lock', '1454487102:1'),
 (201, 71, '_edit_last', '1'),
-(202, 71, '_edit_lock', '1454487122:1');
+(202, 71, '_edit_lock', '1454487122:1'),
+(205, 73, '_edit_last', '1'),
+(206, 73, '_edit_lock', '1454492540:1'),
+(211, 75, '_edit_last', '1'),
+(214, 75, '_edit_lock', '1454492943:1'),
+(215, 77, '_edit_last', '1'),
+(216, 77, '_edit_lock', '1454492707:1'),
+(219, 79, '_edit_last', '1'),
+(220, 79, '_edit_lock', '1454493632:1'),
+(225, 81, '_wp_attached_file', '2016/02/lastwork4.jpg'),
+(226, 81, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:208;s:6:"height";i:208;s:4:"file";s:21:"2016/02/lastwork4.jpg";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"lastwork4-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(227, 82, '_wp_attached_file', '2016/02/lastwork1.jpg'),
+(228, 82, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:208;s:6:"height";i:208;s:4:"file";s:21:"2016/02/lastwork1.jpg";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"lastwork1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(229, 83, '_wp_attached_file', '2016/02/lastwork2.jpg'),
+(230, 83, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:208;s:6:"height";i:208;s:4:"file";s:21:"2016/02/lastwork2.jpg";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"lastwork2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(231, 84, '_wp_attached_file', '2016/02/lastwork3.jpg'),
+(232, 84, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:208;s:6:"height";i:208;s:4:"file";s:21:"2016/02/lastwork3.jpg";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"lastwork3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(233, 73, 'portfolio_img', 'http://extended/wp-content/uploads/2016/02/lastwork1.jpg'),
+(236, 85, '_wp_attached_file', '2016/02/artical3.jpg'),
+(237, 85, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:532;s:6:"height";i:278;s:4:"file";s:20:"2016/02/artical3.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"artical3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:20:"artical3-300x157.jpg";s:5:"width";i:300;s:6:"height";i:157;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(238, 86, '_wp_attached_file', '2016/02/artical1.jpg'),
+(239, 86, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:532;s:6:"height";i:278;s:4:"file";s:20:"2016/02/artical1.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"artical1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:20:"artical1-300x157.jpg";s:5:"width";i:300;s:6:"height";i:157;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(240, 87, '_wp_attached_file', '2016/02/artical2.jpg'),
+(241, 87, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:532;s:6:"height";i:278;s:4:"file";s:20:"2016/02/artical2.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:20:"artical2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:20:"artical2-300x157.jpg";s:5:"width";i:300;s:6:"height";i:157;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
+(242, 73, '_thumbnail_id', '85'),
+(245, 75, 'portfolio_img', 'http://extended/wp-content/uploads/2016/02/lastwork2.jpg'),
+(246, 75, '_thumbnail_id', '86'),
+(249, 77, 'portfolio_img', 'http://extended/wp-content/uploads/2016/02/lastwork3.jpg'),
+(250, 77, '_thumbnail_id', '87'),
+(255, 79, '_thumbnail_id', '86'),
+(256, 79, 'portfolio_img', 'http://extended/wp-content/uploads/2016/02/lastwork4.jpg');
 
 -- --------------------------------------------------------
 
@@ -483,7 +513,7 @@ CREATE TABLE IF NOT EXISTS `ext_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=73 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=90 ;
 
 --
 -- Дамп данных таблицы `ext_posts`
@@ -559,7 +589,23 @@ INSERT INTO `ext_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (69, 1, '2016-02-03 11:13:58', '2016-02-03 08:13:58', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'Very Powerful', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'publish', 'open', 'open', '', 'very-powerful', '', '', '2016-02-03 11:13:58', '2016-02-03 08:13:58', '', 0, 'http://extended/?p=69', 0, 'post', '', 0),
 (70, 1, '2016-02-03 11:13:58', '2016-02-03 08:13:58', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'Very Powerful', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'inherit', 'closed', 'closed', '', '69-revision-v1', '', '', '2016-02-03 11:13:58', '2016-02-03 08:13:58', '', 69, 'http://extended/2016/02/03/69-revision-v1/', 0, 'revision', '', 0),
 (71, 1, '2016-02-03 11:14:19', '2016-02-03 08:14:19', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'Drag Modules', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'publish', 'open', 'open', '', 'drag-modules', '', '', '2016-02-03 11:14:19', '2016-02-03 08:14:19', '', 0, 'http://extended/?p=71', 0, 'post', '', 0),
-(72, 1, '2016-02-03 11:14:19', '2016-02-03 08:14:19', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'Drag Modules', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'inherit', 'closed', 'closed', '', '71-revision-v1', '', '', '2016-02-03 11:14:19', '2016-02-03 08:14:19', '', 71, 'http://extended/2016/02/03/71-revision-v1/', 0, 'revision', '', 0);
+(72, 1, '2016-02-03 11:14:19', '2016-02-03 08:14:19', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>\r\n<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'Drag Modules', '<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>', 'inherit', 'closed', 'closed', '', '71-revision-v1', '', '', '2016-02-03 11:14:19', '2016-02-03 08:14:19', '', 71, 'http://extended/2016/02/03/71-revision-v1/', 0, 'revision', '', 0),
+(73, 1, '2016-02-03 12:37:30', '2016-02-03 09:37:30', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 1', '', 'publish', 'open', 'open', '', 'risus-parturient-malesuada-1', '', '', '2016-02-03 12:44:38', '2016-02-03 09:44:38', '', 0, 'http://extended/?p=73', 0, 'post', '', 0),
+(74, 1, '2016-02-03 12:37:30', '2016-02-03 09:37:30', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 1', '', 'inherit', 'closed', 'closed', '', '73-revision-v1', '', '', '2016-02-03 12:37:30', '2016-02-03 09:37:30', '', 73, 'http://extended/73-revision-v1/', 0, 'revision', '', 0),
+(75, 1, '2016-02-03 12:38:08', '2016-02-03 09:38:08', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 2', '', 'publish', 'open', 'open', '', 'risus-parturient-malesuada-2', '', '', '2016-02-03 12:50:38', '2016-02-03 09:50:38', '', 0, 'http://extended/?p=75', 0, 'post', '', 0),
+(76, 1, '2016-02-03 12:38:08', '2016-02-03 09:38:08', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 2', '', 'inherit', 'closed', 'closed', '', '75-revision-v1', '', '', '2016-02-03 12:38:08', '2016-02-03 09:38:08', '', 75, 'http://extended/75-revision-v1/', 0, 'revision', '', 0),
+(77, 1, '2016-02-03 12:38:47', '2016-02-03 09:38:47', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 3', '', 'publish', 'open', 'open', '', 'risus-parturient-malesuada-3', '', '', '2016-02-03 12:46:37', '2016-02-03 09:46:37', '', 0, 'http://extended/?p=77', 0, 'post', '', 0),
+(78, 1, '2016-02-03 12:38:47', '2016-02-03 09:38:47', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 3', '', 'inherit', 'closed', 'closed', '', '77-revision-v1', '', '', '2016-02-03 12:38:47', '2016-02-03 09:38:47', '', 77, 'http://extended/77-revision-v1/', 0, 'revision', '', 0),
+(79, 1, '2016-02-03 12:39:17', '2016-02-03 09:39:17', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 4', '', 'publish', 'open', 'open', '', 'risus-parturient-malesuada-4', '', '', '2016-02-03 12:47:17', '2016-02-03 09:47:17', '', 0, 'http://extended/?p=79', 0, 'post', '', 0),
+(80, 1, '2016-02-03 12:39:17', '2016-02-03 09:39:17', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\r\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 4', '', 'inherit', 'closed', 'closed', '', '79-revision-v1', '', '', '2016-02-03 12:39:17', '2016-02-03 09:39:17', '', 79, 'http://extended/79-revision-v1/', 0, 'revision', '', 0),
+(81, 1, '2016-02-03 12:42:09', '2016-02-03 09:42:09', '', 'lastwork4', '', 'inherit', 'open', 'closed', '', 'lastwork4', '', '', '2016-02-03 12:42:09', '2016-02-03 09:42:09', '', 0, 'http://extended/wp-content/uploads/2016/02/lastwork4.jpg', 0, 'attachment', 'image/jpeg', 0),
+(82, 1, '2016-02-03 12:42:10', '2016-02-03 09:42:10', '', 'lastwork1', '', 'inherit', 'open', 'closed', '', 'lastwork1', '', '', '2016-02-03 12:42:10', '2016-02-03 09:42:10', '', 0, 'http://extended/wp-content/uploads/2016/02/lastwork1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(83, 1, '2016-02-03 12:42:11', '2016-02-03 09:42:11', '', 'lastwork2', '', 'inherit', 'open', 'closed', '', 'lastwork2', '', '', '2016-02-03 12:42:11', '2016-02-03 09:42:11', '', 0, 'http://extended/wp-content/uploads/2016/02/lastwork2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(84, 1, '2016-02-03 12:42:12', '2016-02-03 09:42:12', '', 'lastwork3', '', 'inherit', 'open', 'closed', '', 'lastwork3', '', '', '2016-02-03 12:42:12', '2016-02-03 09:42:12', '', 0, 'http://extended/wp-content/uploads/2016/02/lastwork3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(85, 1, '2016-02-03 12:43:46', '2016-02-03 09:43:46', '', 'artical3', '', 'inherit', 'open', 'closed', '', 'artical3', '', '', '2016-02-03 12:43:46', '2016-02-03 09:43:46', '', 73, 'http://extended/wp-content/uploads/2016/02/artical3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(86, 1, '2016-02-03 12:43:47', '2016-02-03 09:43:47', '', 'artical1', '', 'inherit', 'open', 'closed', '', 'artical1', '', '', '2016-02-03 12:43:47', '2016-02-03 09:43:47', '', 73, 'http://extended/wp-content/uploads/2016/02/artical1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(87, 1, '2016-02-03 12:43:48', '2016-02-03 09:43:48', '', 'artical2', '', 'inherit', 'open', 'closed', '', 'artical2', '', '', '2016-02-03 12:43:48', '2016-02-03 09:43:48', '', 73, 'http://extended/wp-content/uploads/2016/02/artical2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(89, 1, '2016-02-03 12:48:24', '2016-02-03 09:48:24', '<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\n\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>\n\n<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>', 'Risus Parturient Malesuada 2', '', 'inherit', 'closed', 'closed', '', '75-autosave-v1', '', '', '2016-02-03 12:48:24', '2016-02-03 09:48:24', '', 75, 'http://extended/75-autosave-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -591,7 +637,7 @@ CREATE TABLE IF NOT EXISTS `ext_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `ext_terms`
@@ -603,7 +649,10 @@ INSERT INTO `ext_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 (3, 'About us', 'about-us', 0),
 (4, 'Our Work', 'our-work', 0),
 (5, 'The Team', 'the-team', 0),
-(6, 'Меню в подвале', '%d0%bc%d0%b5%d0%bd%d1%8e-%d0%b2-%d0%bf%d0%be%d0%b4%d0%b2%d0%b0%d0%bb%d0%b5', 0);
+(6, 'Меню в подвале', '%d0%bc%d0%b5%d0%bd%d1%8e-%d0%b2-%d0%bf%d0%be%d0%b4%d0%b2%d0%b0%d0%bb%d0%b5', 0),
+(7, 'Print', 'print', 0),
+(8, 'Marketing', 'marketing', 0),
+(9, 'Branding', 'branding', 0);
 
 -- --------------------------------------------------------
 
@@ -640,7 +689,17 @@ INSERT INTO `ext_term_relationships` (`object_id`, `term_taxonomy_id`, `term_ord
 (65, 3, 0),
 (67, 3, 0),
 (69, 3, 0),
-(71, 3, 0);
+(71, 3, 0),
+(73, 4, 0),
+(73, 7, 0),
+(75, 4, 0),
+(75, 7, 0),
+(75, 8, 0),
+(75, 9, 0),
+(77, 4, 0),
+(77, 7, 0),
+(79, 4, 0),
+(79, 7, 0);
 
 -- --------------------------------------------------------
 
@@ -658,7 +717,7 @@ CREATE TABLE IF NOT EXISTS `ext_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `ext_term_taxonomy`
@@ -668,9 +727,12 @@ INSERT INTO `ext_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `des
 (1, 1, 'category', '', 0, 1),
 (2, 2, 'nav_menu', '', 0, 8),
 (3, 3, 'category', '', 0, 4),
-(4, 4, 'category', '', 0, 0),
+(4, 4, 'category', '', 0, 4),
 (5, 5, 'category', '', 0, 0),
-(6, 6, 'nav_menu', '', 0, 4);
+(6, 6, 'nav_menu', '', 0, 4),
+(7, 7, 'post_tag', '', 0, 4),
+(8, 8, 'post_tag', '', 0, 1),
+(9, 9, 'post_tag', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -714,7 +776,7 @@ INSERT INTO `ext_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (19, 1, 'ext_user-settings', 'editor=html&libraryContent=browse&urlbutton=custom'),
 (20, 1, 'ext_user-settings-time', '1454413428'),
 (21, 1, 'closedpostboxes_post', 'a:0:{}'),
-(22, 1, 'metaboxhidden_post', 'a:5:{i:0;s:13:"trackbacksdiv";i:1;s:10:"postcustom";i:2;s:16:"commentstatusdiv";i:3;s:7:"slugdiv";i:4;s:9:"authordiv";}');
+(22, 1, 'metaboxhidden_post', 'a:4:{i:0;s:13:"trackbacksdiv";i:1;s:16:"commentstatusdiv";i:2;s:7:"slugdiv";i:3;s:9:"authordiv";}');
 
 -- --------------------------------------------------------
 
