@@ -69,24 +69,27 @@
 			<?php else: ?>
 			<?php endif; ?>
 
-		<div class="advance">
-			<div class="why-us">
-				<!-- Accordion -->
-				<h1 class="center-n"><span class="hnc">Why Choose Us</span></h1>
-				<div id="accordion">
-					<h3>Accordion Title 1</h3>
-					<div>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</div>
-					
-					<h3>Accordion Title 2</h3>
-					<div>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</div>
-					
-					<h3>Accordion Title 3</h3>
-					<div>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</div>
+		
+			<?php 
+				$id = 10;//номер категории
+				$posts_acardion = new WP_Query(array('cat' => $id, 'posts_per_page' => 3, 'order' => 'ASC',));
+			?>
+			<?php if ($posts_acardion->have_posts()): ?>
+				<div class="why-us">
+					<h1 class="center-n"><span class="hnc">Why Choose Us</span></h1>
+					<div id="accordion">
+					<?php while($posts_acardion->have_posts()): $posts_acardion->the_post(); ?>
+					<h3><?php the_title();?></h3>
+						<div><?php the_content();?></div>
+					<?php endwhile; ?>
+					</div>
 				</div>
-			</div>
-			
+			<?php else: ?>
+				<p>Блок для записей в формате акардиона</p>
+			<?php endif; ?>
+			<!--
 			<div class="our-services"> 
-				<!-- Tabs -->
+			
 				<h1 class="center-n"><span class="hnc">Our Services</span></h1>
 				<div id="tabs">
 					<ul>
@@ -101,7 +104,33 @@
 					<div id="tabs-4">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
 				</div>
 				
-			</div>			
-		</div>
+			</div>	-->		
+			<?php 
+				$id = 11;//номер категории
+				$posts_tab = new WP_Query(array('cat' => $id, 'posts_per_page' => 4, 'order' => 'ASC',));
+				$sc = 0;
+			?>
+			<?php if ($posts_tab->have_posts()): ?>
+				<div class="our-services"> 
+					<h1 class="center-n"><span class="hnc">Our Services</span></h1>
+					<div id="tabs">
+						<ul>
+					<?php while($posts_tab->have_posts()): $posts_tab->the_post(); ?>
+							<?php $sc++;?>
+							<li><a href="#tabs-<?php echo $sc; ?>"><?php the_title(); ?></a></li>
+					<?php endwhile; ?>
+						</ul>
+					<?php while($posts_tab->have_posts()): $posts_tab->the_post(); ?>
+							<?php $sc++;?>
+							<li><a href="#tabs-<?php echo $sc; ?>"><?php the_title(); ?></a></li>
+					<?php endwhile; ?>
+
+						
+					</div>
+				</div>
+			<?php else: ?>
+				<p>Блок для записей в формате таблица</p>
+			<?php endif; ?>
+		</div> 
 	</div>
 <?php get_footer();?>    
