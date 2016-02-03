@@ -143,6 +143,9 @@ body{
 	.whatwedo h1{
 		font:16px "Droid Serif"; margin-bottom:15px; background:url(images/background-line.png) 0 6px repeat-x; 
 	}
+	.whatwedo h1 span a{
+		font:16px "Droid Serif"; color:#333;
+	}
 	.whatwedo h1 span{
 		background:#fff; padding-right:15px;
 	}

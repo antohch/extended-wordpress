@@ -18,10 +18,6 @@
 <?php else: ?>
 <div><h1>Место для слайдера</h1></div>
 <?php endif; ?>
-
-<!--		<h1>Extended is immensely powerful, flexible and nicely responsive.</h1>
-		<p>You can easily add modules to the page with our Front-end Drag & Drop functionality. Page layouts began to be infinite and you can follow your creativity. The header is very flexible and allow you to upload backgrounds as well as choosing between few header layouts. Creating and updating your theme has never been that easy and it is fun to play with. Take a tour at all the pages and discover what a great and beautiful theme has to offer.</p>
-	-->
         <?php if (have_posts()): while(have_posts()): the_post(); ?>
             <div class="under-slider">
                 <h1><?php the_title(); ?></h1>
@@ -32,8 +28,23 @@
         <?php endif; ?>
 
 	<div class="content-main">
-		<div class="whatwedo">
-			<div>
+		
+			<?php 
+				$id = 3;//номер категории
+				$posts_about = new WP_Query(array('cat' => $id, 'posts_per_page' => 4, 'order' => 'ASC',));
+			?>
+			<?php if ($posts_about->have_posts()): ?>
+				<div class="whatwedo">
+				<?php while($posts_about->have_posts()): $posts_about->the_post(); ?>
+					<div>
+						<h1><span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h1>
+						<?php the_excerpt();?>
+					</div>
+				<?php endwhile; ?>
+				</div>
+			<?php else: ?>
+			<?php endif; ?>
+			<!--<div>
 				<h1><span>Flexibility</span></h1>
 				<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>
 			</div>
@@ -48,8 +59,8 @@
 			<div>
 				<h1><span>Drag Modules</span></h1>
 				<p>Fusce dapibus, tellus ac cursus como, tortor mauris condimentum nibh, ut fermentum massa justo sit amet isus.</p>
-			</div>
-		</div>
+			</div>-->
+		
 		<h1 class="center-n"><span class="hnc">Our Latest Work</span> <span class="hnl"><a href="#">/ View All Portfolio</a></span></h1>
 		<div class="our-works-main">
 			<div class="our-works">
