@@ -76,6 +76,23 @@ function slider_index(){
 	));
 }
 
+/*Копирайт*/
+add_action('init', 'copirite_index');
+function copirite_index(){
+	register_post_type('copirite', array(
+		'public' => true,
+		'supports' => array('title'),
+		'labels' => array(
+			'name' => 'Копирайт',
+			'add_new' => 'Добавить новый копирайт',
+			'all_items' => 'Все коприайты',
+			'add_new_item' => 'Добавить копирайт',
+		),
+		'menu_position' => 100,
+		'menu_icon' => admin_url().'/images/media-button.png',
+	));
+}
+
 /*поддержка миниатюр*/
 add_theme_support('post-thumbnails');
 

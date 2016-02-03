@@ -1,5 +1,11 @@
 <div class="footer">
-		<p class="copy">Copyright 2012. All Right Reserved MonkeeThemes.</p>
+		<?php $post_copirite = new WP_Query(array('post_type' => 'copirite', 'posts_per_page' => 1,)); ?>
+		<?php if($post_copirite->have_posts()):?>
+			<?php while($post_copirite->have_posts()): $post_copirite->the_post();?>
+				<p class="copy"><?php the_title(); ?></p>
+			<?php endwhile;?>
+		<?php endif?>
+		
 		<!--<p class="ftrmenu">
 			<a href="#">Home</a> |
 			<a href="#">About</a> |

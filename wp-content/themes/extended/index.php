@@ -45,7 +45,6 @@
 			<?php else: ?>
 			<?php endif; ?>
 
-
 			<?php 
 				$id = 4;//номер категории
 				$posts_about = new WP_Query(array('cat' => $id, 'posts_per_page' => 4, 'order' => 'ASC',));
@@ -76,7 +75,7 @@
 			?>
 			<?php if ($posts_acardion->have_posts()): ?>
 				<div class="why-us">
-					<h1 class="center-n"><span class="hnc">Why Choose Us</span></h1>
+					<h1 class="center-n"><span class="hnc"><?php echo get_the_category_by_ID($id); ?></span></h1>
 					<div id="accordion">
 					<?php while($posts_acardion->have_posts()): $posts_acardion->the_post(); ?>
 					<h3><?php the_title();?></h3>
@@ -87,50 +86,33 @@
 			<?php else: ?>
 				<p>Блок для записей в формате акардиона</p>
 			<?php endif; ?>
-			<!--
-			<div class="our-services"> 
-			
-				<h1 class="center-n"><span class="hnc">Our Services</span></h1>
-				<div id="tabs">
-					<ul>
-						<li><a href="#tabs-1">Tab Title 1</a></li>
-						<li><a href="#tabs-2">Tab Title 2</a></li>
-						<li><a href="#tabs-3">Tab Title 3</a></li>
-						<li><a href="#tabs-4">Tab Title 4</a></li>
-					</ul>
-					<div id="tabs-1"><img class="img-righter" src="<?php bloginfo('template_url')?>/images/tabs-img1.jpg" alt="" />Cum sociis natoque penatibus et magnis dis partent montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis disamet non magna.</div>
-					<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-					<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
-					<div id="tabs-4">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
-				</div>
-				
-			</div>	-->		
+	
 			<?php 
 				$id = 11;//номер категории
 				$posts_tab = new WP_Query(array('cat' => $id, 'posts_per_page' => 4, 'order' => 'ASC',));
-				$sc = 0;
 			?>
 			<?php if ($posts_tab->have_posts()): ?>
 				<div class="our-services"> 
-					<h1 class="center-n"><span class="hnc">Our Services</span></h1>
+					<h1 class="center-n"><span class="hnc"><?php echo get_the_category_by_ID($id); ?></span></h1>
 					<div id="tabs">
 						<ul>
-					<?php while($posts_tab->have_posts()): $posts_tab->the_post(); ?>
-							<?php $sc++;?>
-							<li><a href="#tabs-<?php echo $sc; ?>"><?php the_title(); ?></a></li>
-					<?php endwhile; ?>
+						<?php while($posts_tab->have_posts()): $posts_tab->the_post(); ?>
+							<li><a href="#tabs-<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+						<?php endwhile; ?>
 						</ul>
-					<?php while($posts_tab->have_posts()): $posts_tab->the_post(); ?>
-							<?php $sc++;?>
-							<li><a href="#tabs-<?php echo $sc; ?>"><?php the_title(); ?></a></li>
-					<?php endwhile; ?>
-
-						
+						<?php $sc = 0; ?>
+						<?php while($posts_tab->have_posts()): $posts_tab->the_post(); ?>
+							<div id="tabs-<?php the_ID();?>">
+								<?php if(has_post_thumbnail()):?>
+									<?php the_post_thumbnail('full', array('class' => "img-righter")); ?>
+								<?php endif;?>
+								<?php the_content(); ?>
+							</div>
+						<?php endwhile; ?>
 					</div>
 				</div>
 			<?php else: ?>
 				<p>Блок для записей в формате таблица</p>
 			<?php endif; ?>
 		</div> 
-	</div>
 <?php get_footer();?>    
