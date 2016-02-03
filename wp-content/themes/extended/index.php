@@ -59,7 +59,7 @@
 							<div class="our-work-short">
 								<img src="<?php bloginfo('template_url')?>/images/our-work-pic.png" alt="" />
 								<h3><?php the_title(); ?></h3>
-								<p>Photoshop, Lightroom</p>
+								<?php my_list_tags();?>
 							</div>
 							<img class="our-works-img" src="<?php echo get_post_meta(get_the_ID(), 'portfolio_img', true); ?>" alt="" />
 						</a>

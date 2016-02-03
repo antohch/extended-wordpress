@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: phpmyadmin
--- Время создания: Фев 03 2016 г., 14:15
+-- Время создания: Фев 03 2016 г., 15:49
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -454,7 +454,7 @@ INSERT INTO `ext_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (215, 77, '_edit_last', '1'),
 (216, 77, '_edit_lock', '1454492707:1'),
 (219, 79, '_edit_last', '1'),
-(220, 79, '_edit_lock', '1454493632:1'),
+(220, 79, '_edit_lock', '1454498262:1'),
 (225, 81, '_wp_attached_file', '2016/02/lastwork4.jpg'),
 (226, 81, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:208;s:6:"height";i:208;s:4:"file";s:21:"2016/02/lastwork4.jpg";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"lastwork4-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}'),
 (227, 82, '_wp_attached_file', '2016/02/lastwork1.jpg'),
