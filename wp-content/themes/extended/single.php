@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <div class="page-title">
-    	<h1>About Us</h1>
-        <p class="page-title-map"><a href="#">Home</a>  /  About Us</p>
+		<?php $cat = get_the_category()?>
+    	<h1><?php echo $cat[0]->name ;?></h1>
+        <p class="page-title-map"><a href="<?php echo home_url(); ?>">Home</a>  /  <a href="<?php echo get_category_link($cat[0]->term_id); ?>"><?php echo $cat[0]->name ;?></a> / <?php the_title(); ?></p>
+		
     </div>  
       
       
@@ -41,14 +43,10 @@
         <h1 class="center-n"><span class="hnc">Our Clients</span></h1>
         
         <div class="our-clients">
-        	<a href="#"><img src="<?php bloginfo('template_url'); ?>/images/client1.jpg" alt="" /></a>
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/client2.jpg" alt="" /></a>
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/client3.jpg" alt="" /></a>
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/client4.jpg" alt="" /></a>
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/client5.jpg" alt="" /></a>
-            <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/client6.jpg" alt="" /></a>
+			<?php if(!dynamic_sidebar('clients')):?>
+				<span>Наши клиенты</span>
+			<?php endif?>
         </div>
-         
             
       </div>
 <?php get_footer(); ?>

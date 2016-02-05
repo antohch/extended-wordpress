@@ -110,3 +110,13 @@ function my_list_tags(){
 		echo $tag_str;
 	}
 }
+
+/*клиенты*/
+register_sidebar(array(
+	'name' => 'Клиенты',
+	'id' => 'clients',
+	'description' => 'используйте виджет текст, для добавления html кода блока клиенты',
+	'before_widget' => '',
+	'after_widget' => '',
+	
+));
