@@ -6,7 +6,6 @@
 		
     </div>  
       
-      
       <div class="content-main">
         <?php if (have_posts()): while(have_posts()): the_post();//проверка на посты; этим циклом выводятся все посты ?>
             <?php the_post_thumbnail('full', array('class' => 'img-lefter')); ?>
