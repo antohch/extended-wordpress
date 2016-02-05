@@ -14,31 +14,29 @@
         <?php else: ?>
                     <h1 class="center-n"><span class="hnc">Для контента</span></h1>
         <?php endif; ?>
-      	                
-        <h1 class="center-n"><span class="hnc">Meet Our Team</span> <span class="hnl">/ <a href="#">View The Team</a></span></h1>
-        <div class="our-team-main">
-        	<div>
-            	<h2><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/team1.jpg" alt="Darren Kimbell" /></a>
-                <br />
-                Darren Kimbell<br />
-                <span>Business Marketing</span></h2>
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor </p>
-            </div>
+		
+		<!-- Our Team -->
+		<?php 
+		$id = 5;
+		$post_team = new WP_Query(array('cat' => $id, 'posts_per_page' => 3, 'order' => 'ASC',)); 
+		?>
+		<?php if ($post_team->have_posts()):?>
+			<h1 class="center-n"><span class="hnc"><?php echo get_category($id)->cat_name ;?></span> <span class="hnl">/ <a href="<?php echo get_category_link($id); ?>">View The Team</a></span></h1>
+
+			<div class="our-team-main">
+		<?php while($post_team->have_posts()): $post_team->the_post(); ?>
             <div>
-            	<h2><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/team2.jpg" alt="Darren Kimbell" /></a>
+            	<h2><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
                 <br />
-                Allan Pesola<br />
-                <span>Developer</span></h2>
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor </p>
+                <?php the_title(); ?><br />
+                <span><?php my_list_tags(); ?></span></h2>
+                <p><?php the_excerpt(); ?></p>
             </div>
-            <div>
-            	<h2><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/team3.jpg" alt="Darren Kimbell" /></a>
-                <br />
-                Lenore Hilker<br />
-                <span>Designer</span></h2>
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor </p>
-            </div>
-       	</div>
+        <?php endwhile; ?>
+			</div>
+        <?php else: ?>
+			<h1 class="center-n"><span class="hnc">Для контента Meet Our Team</span></h1>
+        <?php endif; ?>              
         
         <h1 class="center-n"><span class="hnc">Our Clients</span></h1>
         
