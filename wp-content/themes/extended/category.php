@@ -3,8 +3,23 @@
     	<h1><?php echo single_cat_title();?></h1>
         <p class="page-title-map"><a href="<?php home_url(); ?>">Home</a>  /  <?php echo single_cat_title();?></p>
     </div>  
-      <div class="page-nav">
-		<ul>
+      
+      	<?php 
+      		$cat_id = get_query_var('cat');
+      		$tags = get_tags_in_cat($cat_id);
+			if(!empty($tags)):
+		?>
+		<div class="page-nav">
+				<ul>
+				<?php
+				foreach($tags as $tag_id => $tag):
+				?>
+					<li><a href="<?php echo get_tag_link($tag_id); ?>"><?php echo $tag?></a></li>
+				<?php endforeach; ?>
+				</ul>
+		</div>
+			<?php endif; ?>	
+		<!--<ul>
 			<li><a href="#">All</a></li>
 			<li><a href="#">Web Design</a></li>
 			<li><a href="#">Marketing</a></li>
@@ -12,8 +27,8 @@
 			<li><a href="#">Branding</a></li>
 			<li><a href="#">Print</a></li>
 			<li><a href="#">Photography</a></li>
-		</ul>
-      </div>
+		<ul>-->
+      
 		<?php if ( have_posts() ) : ?>
 		<div class="content-main">
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -39,42 +54,4 @@
 				<p>В рубрике нет постов</p>
 			</div>
 		<?php endif; ?>
-   <!-- <div class="content-main">
-		<div class="artical-anons-main">
-			<img src="<?php bloginfo('template_url')?>/images/artical1.jpg" alt="" class="artical-img" />
-			<div class="artical-head">
-				<h1>Risus Parturient Malesuada</h1>
-				<p>Print, Marketing, Branding</p>
-			</div>
-			<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>
-			<p><a href="#" class="read-more">Read more</a></p>
-		</div>
-
-		<div class="artical-anons-main">
-			<img src="<?php bloginfo('template_url')?>/images/artical2.jpg" alt="" class="artical-img" />
-			<div class="artical-head">
-			<h1>Risus Parturient Malesuada</h1>
-			<p>Print, Marketing, Branding</p>
-			</div>
-			<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>
-			<p><a href="#" class="read-more">Read more</a></p>
-		</div>
-
-		<div class="artical-anons-main">
-			<img src="<?php bloginfo('template_url')?>/images/artical3.jpg" alt="" class="artical-img" />
-			<div class="artical-head">
-			<h1>Risus Parturient Malesuada</h1>
-			<p>Print, Marketing, Branding</p>
-			</div>
-			<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id </p>
-			<p><a href="#" class="read-more">Read more</a></p>
-		</div>
-		<ul class="pager">
-			<li><a href="#" class="now">1</a></li></li>
-			<li><a href="#">2</a></li></li>
-			<li><a href="#">3</a></li></li>
-			<li><a href="#">4</a></li></li>
-		</ul>
-		
-	</div>-->
 <?php get_footer(); ?>

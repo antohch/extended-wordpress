@@ -1,4 +1,4 @@
-<div class="footer">
+﻿<div class="footer">
 		<?php $post_copirite = new WP_Query(array('post_type' => 'copirite', 'posts_per_page' => 1,)); ?>
 		<?php if($post_copirite->have_posts()):?>
 			<?php while($post_copirite->have_posts()): $post_copirite->the_post();?>
@@ -6,13 +6,6 @@
 			<?php endwhile;?>
 		<?php endif?>
 		
-		<!--<p class="ftrmenu">
-			<a href="#">Home</a> |
-			<a href="#">About</a> |
-			<a href="#">Sitemap</a> |
-			<a href="#">Contact</a>
-
-		</p>-->
 		<?php wp_nav_menu(array(
 				'container_class' => 'ftrmenu', 
 				'menu_class' => '', 

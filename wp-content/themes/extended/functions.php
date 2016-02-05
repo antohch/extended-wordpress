@@ -120,3 +120,19 @@ register_sidebar(array(
 	'after_widget' => '',
 	
 ));
+
+/* метки категории */
+function get_tags_in_cat($cat_id){
+	$posts = get_posts(array('category' => $cat_id, 'namberposts' => -1));
+	$tags = array();
+	foreach($posts as $post){
+		$post_tags = get_the_tags($post->ID);
+		if(!empty($post_tags)){
+			foreach($post_tags as $tag){
+				$tags[$tag->term_id] = $tag->name;
+			}
+		}
+	}
+	asort($tags);
+	return $tags;
+}
