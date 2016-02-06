@@ -19,16 +19,6 @@
 				</ul>
 		</div>
 			<?php endif; ?>	
-		<!--<ul>
-			<li><a href="#">All</a></li>
-			<li><a href="#">Web Design</a></li>
-			<li><a href="#">Marketing</a></li>
-			<li><a href="#">Logo</a></li>
-			<li><a href="#">Branding</a></li>
-			<li><a href="#">Print</a></li>
-			<li><a href="#">Photography</a></li>
-		<ul>-->
-      
 		<?php if ( have_posts() ) : ?>
 		<div class="content-main">
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -42,13 +32,14 @@
 					<p><a href="<?php the_permalink(); ?>" class="read-more">Read more</a></p>
 				</div>
 			<?php endwhile; ?>
-		<ul class="pager">
+			<?php wp_corenavi(); ?>
+		<!--<ul class="pager">
 			<li><a href="#" class="now">1</a></li></li>
 			<li><a href="#">2</a></li></li>
 			<li><a href="#">3</a></li></li>
 			<li><a href="#">4</a></li></li>
 		</ul>
-		</div>
+		</div>-->
 		<?php else : ?>
 			<div class="content-main">
 				<p>В рубрике нет постов</p>
