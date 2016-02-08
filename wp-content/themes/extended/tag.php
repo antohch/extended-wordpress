@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <div class="page-title">
     	<h1><?php echo single_cat_title();?></h1>
-        <p class="page-title-map"><a href="<?php home_url(); ?>">Home</a>  /  <?php echo single_cat_title();?></p>
     </div>  
 
 		<?php if ( have_posts() ) : ?>
