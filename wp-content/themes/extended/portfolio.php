@@ -37,23 +37,6 @@
         </div>
         
         <div class="right-bar">
-        	<!--<h3><span>Skills</span></h3>
-            <ul>
-            	<li><a href="#">HTML/CSS</a></li>
-                <li><a href="#">jQuery</a></li>
-                <li><a href="#">WordPress</a></li>
-                <li><a href="#">Photoshop</a></li>
-            </ul>  
-            <h3><span>Categories</span></h3>
-            <ul>
-            	<li><a href="#">Web Development</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Template</a></li>                
-            </ul>  
-            <h3><span>Client</span></h3>
-            <ul>
-            	<li><a href="#"><em>MonkeeThemes</em></a></li>                
-            </ul>   -->
 			<?php if(!dynamic_sidebar('single_portfolio')):?>
 				<h3><span>Categoris</span></h3>
 				<ul>
@@ -63,8 +46,37 @@
         </div>	
         
         <div class="clr"></div><br />
-      	
-        <h1 class="center-n"><span class="hnc">Related Projects</span></h1>
+      	<?php
+		//получаем теги
+		$tags = strip_tags(my_list_tags(false));
+		//получаем номер категории
+		if($tags):
+			$cat = get_the_category();
+			$cat = $cat[0]->cat_ID;
+			$args = array(
+				'cat' => $cat,
+				'tag' => $tags,
+				'post_per_page' => 4,
+				'post__not_in' => array($post->ID),
+			);
+			$posts_related = new WP_Query($args);
+		?>
+			<?php if ($posts_related->have_posts()):?>
+				<h1 class="center-n"><span class="hnc">Related Projects</span></h1>
+				<div class="our-works-main">
+			<?php while($posts_related->have_posts()): $posts_related->the_post(); ?>
+				<div class="our-works">
+					<a class="our-work-href" href="<?php the_permalink(); ?>">
+						<img class="our-work-img" src="<?php echo get_post_meta(get_the_ID(), 'portfolio_img', true); ?>" alt="" />
+					</a>
+				</div>
+			<?php endwhile; ?>
+				</div>
+			<?php else: ?>
+				<p>Связанных записей нет</p>
+			<?php endif; ?>
+		<?php endif;?>
+       <!-- <h1 class="center-n"><span class="hnc">Related Projects</span></h1>
         
         <div class="our-works-main">
         	<div class="our-works">
@@ -91,6 +103,6 @@
                     <img class="our-work-img" src="<?php bloginfo('template_url')?>/images/our-work4.jpg" alt="" />
                 </a>
             </div>
-        </div>
+        </div>-->
 	</div>
 <?php get_footer(); ?>

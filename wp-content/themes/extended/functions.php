@@ -97,7 +97,7 @@ function copirite_index(){
 add_theme_support('post-thumbnails');
 
 /*список меток*/
-function my_list_tags(){
+function my_list_tags($echo = true){
 	$tags = get_the_tags();
 	$tag_str = null;
 	if($tags){
@@ -107,9 +107,15 @@ function my_list_tags(){
 		}
 		$tag_str = rtrim($tag_str, ', ');
 		$tag_str .= "</p>";
-		echo $tag_str;
+		
+		if ($echo){
+			echo $tag_str;
+		}else{
+			return $tag_str;
+		}
 	}
 }
+
 
 /*клиенты*/
 register_sidebar(array(
