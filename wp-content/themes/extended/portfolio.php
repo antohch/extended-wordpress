@@ -23,44 +23,21 @@
 	</div>
 	<?php endif;?>
 	<!-- слайдер -->
-	<!--<div class="slider-portfolio">
-		<div class="flexslider">
-			<ul class="slides">
-				<li>
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-single.jpg" />
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-shadow.png" />
-				</li>
-				<li>
-
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-single.jpg" />
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-shadow.png" />
-				</li>
-				<li>
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-single.jpg" />
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-shadow.png" />
-				</li>
-				<li>
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-single.jpg" />
-					<img src="<?php bloginfo('template_url')?>/images/portfolio-shadow.png" />
-				</li>
-			</ul>
-		</div>
-	</div>-->
     <div class="content-main">
 <div class="content-left">
-        	<h2 class="projeact-descrip"><span><img src="<?php bloginfo('template_url')?>/images/progect-descript.jpg" alt="" /> Project Description</span></h2>
+
             
-            <p>Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.</p>
-
-<p>Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.</p>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-<p>Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.Nullam id dolor id n ibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula. eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+			<?php if (have_posts()): while(have_posts()): the_post(); ?>
+				<h2 class="projeact-descrip"><span><img src="<?php bloginfo('template_url')?>/images/progect-descript.jpg" alt="" /> Project Description</span></h2>
+				<?php the_content(); ?>
+			<?php endwhile; ?>
+			<?php else: ?>
+				<p>Для контента</p>
+			<?php endif; ?>
         </div>
         
         <div class="right-bar">
-        	<h3><span>Skills</span></h3>
+        	<!--<h3><span>Skills</span></h3>
             <ul>
             	<li><a href="#">HTML/CSS</a></li>
                 <li><a href="#">jQuery</a></li>
@@ -76,7 +53,13 @@
             <h3><span>Client</span></h3>
             <ul>
             	<li><a href="#"><em>MonkeeThemes</em></a></li>                
-            </ul>    
+            </ul>   -->
+			<?php if(!dynamic_sidebar('single_portfolio')):?>
+				<h3><span>Categoris</span></h3>
+				<ul>
+					<?php wp_list_categories(array('title_li' => ''));?>           
+				</ul>
+			<?php endif; ?>
         </div>	
         
         <div class="clr"></div><br />

@@ -121,6 +121,18 @@ register_sidebar(array(
 	
 ));
 
+/* сайдбар продфолио*/
+register_sidebar(array(
+	'name' => 'Сайдбар записи портфолио',
+	'id' => 'single_portfolio',
+	'description' => 'используйте виджет текст, для добавления html кода блока клиенты',
+	'before_title' => '<h3><span>',
+	'after_title' => '</span></h3>',
+	'before_widget' => '',
+	'after_widget' => '',
+	
+));
+
 /* метки категории */
 function get_tags_in_cat($cat_id){
 	$posts = get_posts(array('category' => $cat_id, 'namberposts' => -1));
@@ -160,3 +172,4 @@ function wp_corenavi(){
 	echo $pages . paginate_links($a);
 	if ($max > 1) echo '</div>';
 }
+
