@@ -5,7 +5,25 @@
         <p class="page-title-map"><a href="<?php echo home_url(); ?>">Home</a>  /  <a href="<?php echo get_category_link($cat[0]->term_id); ?>"><?php echo $cat[0]->name ;?></a> / <?php the_title(); ?></p>
 		
     </div>  
+	
+	<!-- слайдер -->
+	<?php $gallery = get_post_meta($post->ID, 'gallery', true);?>
+	<?php if(!empty($gallery)): $gallery = explode(",", $gallery);?>
 	<div class="slider-portfolio">
+		<div class="flexslider">
+			<ul class="slides">
+	<?php foreach($gallery as $item): ?>
+				<li>
+					<?php echo wp_get_attachment_image($item, 'full'); ?>
+					<img src="<?php bloginfo('template_url')?>/images/portfolio-shadow.png" />
+				</li>
+	<?php endforeach; ?>
+			</ul>
+		</div>
+	</div>
+	<?php endif;?>
+	<!-- слайдер -->
+	<!--<div class="slider-portfolio">
 		<div class="flexslider">
 			<ul class="slides">
 				<li>
@@ -27,7 +45,7 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+	</div>-->
     <div class="content-main">
 <div class="content-left">
         	<h2 class="projeact-descrip"><span><img src="<?php bloginfo('template_url')?>/images/progect-descript.jpg" alt="" /> Project Description</span></h2>
