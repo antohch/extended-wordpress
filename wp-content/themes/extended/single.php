@@ -1,3 +1,9 @@
+<?php
+if(in_category(4)){
+	include 'portfolio.php';
+	exit;
+}
+?>
 <?php get_header(); ?>
 <div class="page-title">
 		<?php $cat = get_the_category()?>

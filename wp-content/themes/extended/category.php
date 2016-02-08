@@ -32,17 +32,12 @@
 					<p><a href="<?php the_permalink(); ?>" class="read-more">Read more</a></p>
 				</div>
 			<?php endwhile; ?>
+		
 			<?php wp_corenavi(); ?>
-		<!--<ul class="pager">
-			<li><a href="#" class="now">1</a></li></li>
-			<li><a href="#">2</a></li></li>
-			<li><a href="#">3</a></li></li>
-			<li><a href="#">4</a></li></li>
-		</ul>
-		</div>-->
 		<?php else : ?>
 			<div class="content-main">
 				<p>В рубрике нет постов</p>
 			</div>
 		<?php endif; ?>
+		</div>
 <?php get_footer(); ?>
