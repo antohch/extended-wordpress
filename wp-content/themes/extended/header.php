@@ -25,7 +25,7 @@
 			));?>
 			<div class="search">
 				<form action="">
-					<input class="search-txt" type="text" name="search" value="Поиск" onfocus="if(this.value=='Поиск')this.value=''" onblur="if(this.value=='')this.value='Поиск'" />
+					<input name="s" class="search-txt" type="text" name="search" value="Поиск" onfocus="if(this.value=='Поиск')this.value=''" onblur="if(this.value=='')this.value='Поиск'" />
 					<input type="image" src="<?php bloginfo('template_url')?>/images/search.png"/>
 				</form>
 			</div>
