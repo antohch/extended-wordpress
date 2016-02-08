@@ -179,3 +179,37 @@ function wp_corenavi(){
 	if ($max > 1) echo '</div>';
 }
 
+function true_loadmore_scripts() {
+	wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
+ 	wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/loadmore.js', array('jquery') );
+}
+ 
+add_action( 'wp_enqueue_scripts', 'true_loadmore_scripts' );
+
+function true_load_posts(){
+	$args = unserialize(stripslashes($_POST['query']));
+	$args['paged'] = $_POST['page'] + 1; // следующая страница
+	$args['post_status'] = 'publish';
+	$q = new WP_Query($args);
+		?><?php if ( $q->have_posts() ) : ?>
+
+			<?php while ( $q->have_posts() ) : $q->the_post(); ?>
+				<div class="artical-anons-main">
+					<?php the_post_thumbnail('full', array('class' => 'artical-img'));?>
+					<div class="artical-head">
+						<h1><?php the_title(); ?></h1>
+						<p><?php my_list_tags(); ?></p>
+					</div>
+					<?php the_excerpt(); ?>
+					<p><a href="<?php the_permalink(); ?>" class="read-more">Read more</a></p>
+				</div>
+
+			<?php endwhile; ?>
+	<?php endif;
+	wp_reset_postdata();
+	die();
+}
+ 
+ 
+add_action('wp_ajax_loadmore', 'true_load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
