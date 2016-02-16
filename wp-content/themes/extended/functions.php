@@ -179,3 +179,5 @@ function wp_corenavi(){
 	if ($max > 1) echo '</div>';
 }
 
+
+
