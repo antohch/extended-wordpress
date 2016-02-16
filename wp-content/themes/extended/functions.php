@@ -200,20 +200,20 @@ function link_b($mypost = ''){
 				$single['parent'][] = $idParentCat;
 				if(!empty($idParentCat)){
 					function get_parent($parent_in){
-						
+						static $singleIn = array();
 						if(empty(get_category($parent_in)->parent)){
-							static $singleIn = null;
+	
 							return true;
 						}
-						static $singleIn;
+						global $singleIn;
 						$singleIn['parent'][] = get_category($parent_in)->parent;
 						get_parent(end($singleIn['parent']));
 						return $singleIn;
 
 					}
-					var_dump(get_parent($idParentCat));
+					global $singleIn;
+					$singleIn = null;
 					$catParRec = get_parent($idParentCat);
-					//var_dump($catParRec);
 					foreach($catParRec['parent'] as $par){
 						$single['parent'][] = $par;
 					}
@@ -234,7 +234,7 @@ function link_b($mypost = ''){
 		}
 		array_pop($single['parent']);
 
-		$link_b = "<p class = 'link_b'><a href='". home_url() ."'>Home</a>  /  ";
+		$link_b = "<p class = 'page-title-map'><a href='". home_url() ."'>Home</a>  /  ";
 		if(is_array($single['parent'])){
 			foreach(array_reverse($single['parent']) as $parent){
 				$link_b .= "<a href='".get_category_link($parent)."'>".get_cat_name($parent)."</a> / ";

@@ -8,8 +8,8 @@ if(in_category(4)){
 <div class="page-title">
 		<?php $cat = get_the_category()?>
     	<h1><?php echo $cat[0]->name ;?></h1>
-        <p class="page-title-map"><a href="<?php echo home_url(); ?>">Home</a>  /  <a href="<?php echo get_category_link($cat[0]->term_id); ?>"><?php echo $cat[0]->name ;?></a> / <?php the_title(); ?></p>
-		<?php link_b();?>
+        <?php echo link_b();?>
+		
 		
     </div>  
       
