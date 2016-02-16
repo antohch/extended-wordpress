@@ -179,5 +179,55 @@ function wp_corenavi(){
 	if ($max > 1) echo '</div>';
 }
 
+//функция хлебные крошки
+function link_b($mypost = ''){
+	global $post;
+	if ($mypost == ''){
+		$mypost = $post;
+	}
+	if($mypost->post_type == "post"){
+		$single['link'] = get_permalink($mypost->ID);
+		$single['title'] = $mypost->post_title;
+		$array_cat = wp_get_post_categories($mypost->ID);
+		if(is_array($array_cat)){
+			$i = 0;
+			$col_arr = $i;
+			$catAll = array();
+			foreach($array_cat as $arrayCatOne){
+				$single['category'][] = $arrayCatOne; 
+				$idParentCat = get_category($arrayCatOne)->parent;
+				//$single['parent'][] = $idParentCat;
+				$single['parent'][] = $idParentCat;
+				while($i == $col_arr){
+					$parent_isset = get_category($single['parent'][$col_arr])->parent;
+					if(!empty($parent_isset)){
+						$single['parent'][] = get_category($single['parent'][$col_arr])->parent;
+						$parent_isset = null;
+						$col_arr++;
+					}
+					$i++;
+				}
+			}
+		}
+		array_pop($single['parent']);
 
+		$link_b = "<p class = 'link_b'><a href='". home_url() ."'>Home</a>  /  ";
+		if(is_array($single['parent'])){
+			foreach(array_reverse($single['parent']) as $parent){
+				$link_b .= "<a href='".get_category_link($parent)."'>".get_cat_name($parent)."</a> / ";
+			}
+		}
+		if (is_array($single['category'])){
+			foreach($single['category'] as $cat){
+				$link_b .= "<a href='".get_category_link($cat)."'>".get_cat_name($cat)."</a>, ";
+			}
+			$link_b = substr($link_b, 0, -2);
+		}
+
+		$link_b .= " / ". $single['title'];
+		$link_b .= "</p>";
+
+		print_r($link_b);
+	}
+}
 
