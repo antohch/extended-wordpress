@@ -202,6 +202,7 @@ function link_b($mypost = ''){
 					function get_parent($parent_in){
 						
 						if(empty(get_category($parent_in)->parent)){
+							static $singleIn = null;
 							return true;
 						}
 						static $singleIn;
@@ -210,7 +211,13 @@ function link_b($mypost = ''){
 						return $singleIn;
 
 					}
-					$single['parent'][] = get_parent($idParentCat);
+					var_dump(get_parent($idParentCat));
+					$catParRec = get_parent($idParentCat);
+					//var_dump($catParRec);
+					foreach($catParRec['parent'] as $par){
+						$single['parent'][] = $par;
+					}
+					
 					//global $singleIn;
 					//var_dump($singleIn);
 				}
