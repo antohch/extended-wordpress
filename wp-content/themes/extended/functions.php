@@ -198,7 +198,23 @@ function link_b($mypost = ''){
 				$idParentCat = get_category($arrayCatOne)->parent;
 				//$single['parent'][] = $idParentCat;
 				$single['parent'][] = $idParentCat;
-				while($i == $col_arr){
+				if(!empty($idParentCat)){
+					function get_parent($parent_in){
+						
+						if(empty(get_category($parent_in)->parent)){
+							return true;
+						}
+						static $singleIn;
+						$singleIn['parent'][] = get_category($parent_in)->parent;
+						get_parent(end($singleIn['parent']));
+						return $singleIn;
+
+					}
+					$single['parent'][] = get_parent($idParentCat);
+					//global $singleIn;
+					//var_dump($singleIn);
+				}
+				/*while($i == $col_arr){
 					$parent_isset = get_category($single['parent'][$col_arr])->parent;
 					if(!empty($parent_isset)){
 						$single['parent'][] = get_category($single['parent'][$col_arr])->parent;
@@ -206,7 +222,7 @@ function link_b($mypost = ''){
 						$col_arr++;
 					}
 					$i++;
-				}
+				}*/
 			}
 		}
 		array_pop($single['parent']);
